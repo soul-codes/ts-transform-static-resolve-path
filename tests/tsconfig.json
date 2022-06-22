@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		"target": "es2019",
 		"module": "esnext",
-		"moduleResolution": "classic",
+		"moduleResolution": "node",
 		"rootDir": "source",
 		"outDir": "output",
 		"strict": true,
@@ -13,12 +13,8 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"esModuleInterop": true,
-		"lib": [ "es2019" ],
-		"plugins": [
-			{ "transform": "../source/index.ts", "after": true }
-		]
+		"lib": ["es2019"],
+		"plugins": [{ "transform": "../source/index.ts", "after": true }]
 	},
-	"include": [
-		"source/**/*.ts",
-	],
+	"include": ["source/**/*.ts"]
 }
