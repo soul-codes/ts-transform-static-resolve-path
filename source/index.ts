@@ -55,7 +55,6 @@ const transformer = (_: typescript.Program) => {
 							transformationContext.factory.createStringLiteral(resolvedPath);
 						return transformationContext.factory.updateImportDeclaration(
 							node,
-							node.decorators,
 							node.modifiers,
 							node.importClause,
 							newModuleSpecifier,
@@ -67,7 +66,6 @@ const transformer = (_: typescript.Program) => {
 							transformationContext.factory.createStringLiteral(resolvedPath);
 						return transformationContext.factory.updateExportDeclaration(
 							node,
-							node.decorators,
 							node.modifiers,
 							node.isTypeOnly,
 							node.exportClause,
