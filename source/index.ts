@@ -2,7 +2,11 @@ import * as path from "path";
 import * as resolve from "resolve";
 import * as typescript from "typescript";
 
-const transformer = (_: typescript.Program) => {
+export interface ConfigInterface {
+	mapTsxToJs?: boolean;
+}
+
+const transformer = (_: typescript.Program, config?: ConfigInterface) => {
 	const resolutionCache = new Map<string, string>();
 
 	return (transformationContext: typescript.TransformationContext) => {
@@ -28,7 +32,11 @@ const transformer = (_: typescript.Program) => {
 					const extension =
 						(/\.tsx?$/.exec(path.basename(resolvedPath)) || [])[0] || void 0;
 					const mappedExtension =
-						extension == ".ts" ? ".js" : extension === ".tsx" ? ".jsx" : "";
+						extension == ".ts" || config?.mapTsxToJs
+							? ".js"
+							: extension === ".tsx"
+							? ".jsx"
+							: "";
 
 					resolvedPath =
 						"./" +

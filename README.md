@@ -19,7 +19,8 @@ Add the following plugin configuration:
 		"plugins": [
 			{
 				"transform": "@soul-codes-dev/ts-transform-static-resolve-path",
-				"after": true
+				"after": true,
+				"mapTsxToJs": true // optional, if not set, .tsx becomes .jsx.
 			}
 		]
 	}
