@@ -6,7 +6,7 @@ export interface ConfigInterface {
 	mapTsxToJs?: boolean;
 }
 
-const transformer = (_: typescript.Program, config?: ConfigInterface) => {
+const transformer = (_: typescript.Program, _config?: ConfigInterface) => {
 	const resolutionCache = new Map<string, string>();
 
 	return (transformationContext: typescript.TransformationContext) => {
@@ -32,7 +32,7 @@ const transformer = (_: typescript.Program, config?: ConfigInterface) => {
 					const extension =
 						(/\.tsx?$/.exec(path.basename(resolvedPath)) || [])[0] || void 0;
 					const mappedExtension =
-						extension == ".ts" || config?.mapTsxToJs
+						extension == ".ts" || true
 							? ".js"
 							: extension === ".tsx"
 							? ".jsx"
