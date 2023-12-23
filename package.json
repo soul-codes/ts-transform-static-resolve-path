@@ -8,10 +8,10 @@
 	"license": "Unlicense",
 	"main": "output/index.js",
 	"devDependencies": {
-		"@release-it/conventional-changelog": "2.0.0",
+		"@release-it/conventional-changelog": "7.0.2",
 		"@types/node": "12.7.1",
 		"@types/resolve": "^1.20.2",
-		"release-it": "14.2.1",
+		"release-it": "16.2.1",
 		"rimraf": "^3.0.2",
 		"ts-node": "8.3.0",
 		"ttypescript": "1.5.13",
