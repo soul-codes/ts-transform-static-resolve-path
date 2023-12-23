@@ -1,7 +1,7 @@
 {
 	"name": "@soul-codes-dev/ts-transform-static-resolve-path",
 	"description": "A TypeScript transformer for ttypescript that applies Node's resolve algorithm on each import path",
-	"version": "2.0.0",
+	"version": "2.1.0-alpha.0",
 	"repository": {
 		"url": "https://github.com/soul-codes/ts-transform-static-resolve-path"
 	},
